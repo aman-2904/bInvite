@@ -13,29 +13,31 @@ import {
 
 import { cn } from "@/lib/utils"
 
-interface TextScrollProps {
-  text: string
-  default_velocity?: number
-  className?: string
-}
+/**
+ * @typedef {Object} TextScrollProps
+ * @property {string} text
+ * @property {number} [default_velocity]
+ * @property {string} [className]
+ */
 
-interface ParallaxProps {
-  children: string
-  baseVelocity: number
-  className?: string
-}
+/**
+ * @typedef {Object} ParallaxProps
+ * @property {string} children
+ * @property {number} baseVelocity
+ * @property {string} [className]
+ */
 
-export const wrap = (min: number, max: number, v: number) => {
+export const wrap = (min, max, v) => {
   const rangeSize = max - min
   return ((((v - min) % rangeSize) + rangeSize) % rangeSize) + min
 }
 
-export const TextScroll: React.FC<TextScrollProps> = ({
+export const TextScroll = ({
   text,
   default_velocity = 5,
   className,
 }) => {
-  const ParallaxText: React.FC<ParallaxProps> = ({
+  const ParallaxText = ({
     children,
     baseVelocity = 100,
     className,
