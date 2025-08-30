@@ -21,7 +21,7 @@ export default function Header() {
   return (
     <header className="w-full border-b bg-white">
       {/* Top Row: Links + Tabs + Icons */}
-      <div className="flex justify-between items-center px-6 py-2 text-sm text-gray-600 border-b">
+      <div className="flex justify-between items-center container mx-auto py-2 text-sm text-gray-600 border-b">
         
         {/* Left links */}
         <div className="flex gap-4">
@@ -60,7 +60,7 @@ export default function Header() {
       </div>
 
       {/* Logo + Categories (same row) */}
-      <div className="flex items-center px-6 py-4 border-b">
+      <div className="flex items-center container mx-auto py-4 border-b">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
@@ -89,6 +89,7 @@ export default function Header() {
 
       {/* Offer Banner */}
       <div className="bg-[#37514D] text-white text-center text-sm py-2 flex justify-center items-center">
+        <div className="container mx-auto">
         <span>
           Ends Tomorrow | 15% off wedding*; 25% off save the dates.{" "}
           <strong>Code: WEDDING2025</strong>{" "}
@@ -96,6 +97,7 @@ export default function Header() {
             View all offers ▸
           </Link>
         </span>
+        </div>
       </div>
     </header>
   );
